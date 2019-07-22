@@ -19,7 +19,7 @@ public class PlanetController {
     }
 
 
-    @GetMapping("/planet")
+    @GetMapping(value = "/planet")
     public ResponseEntity<Planet> getPlanetByName(@RequestParam(value = "name") String planetName){
         return new ResponseEntity<> (planetService.getPlanetByName(planetName), HttpStatus.OK);
     }
